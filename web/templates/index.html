@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+ <meta name="description" content="A mobile application that lets you access data in your Google account via SMS."/>
+ <meta name="keywords" content="SMS, text messages, Google, Twilio, google tasks, google contacts, google maps, gmail, google latitude, google calendar, mobile, phone"/>
+ <meta name="google-site-verification" content="fixme"/>
+ <title>Smoogle Juice</title>
+ <link rel="stylesheet" type="text/css" href="css/style.css"> 
+</head>
+ <body>
+ 
+ {{greeting}}
+ 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{google_analytics}}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+ </body>
+</html>

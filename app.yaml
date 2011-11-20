@@ -1,0 +1,30 @@
+application: smooglejuice
+version: 1
+runtime: python
+api_version: 1
+
+derived_file_type:
+- python_precompiled
+
+handlers:
+- url: /css/.*
+  static_dir: web/css
+  
+- url: /img/.*
+  static_dir: web/img
+
+- url: /js/.*
+  static_dir: web/js
+  
+- url: /favicon.ico
+  static_files: web/img/favicon.ico
+  upload: web/img/favicon.ico
+
+- url: /oauth2callback
+  script: oauth2client/appengine.py
+  
+- url: /task.*
+  script: tasks/task.py
+  
+- url: .*
+  script: main.py
